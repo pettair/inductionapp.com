@@ -1,0 +1,18 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title Juice ⚡ A Polyglot Database Client For Mac OS X
+    %link{:rel => "stylesheet", :href => "/css/screen.css", :type => 'text/css', :media => "screen", :charset => "utf-8"}
+
+  %body
+    .container
+      = yield
+      
+      %footer
+        :markdown
+          ---
+          (cc) 2012 Mattt Thompson
+          
+    %a#github{:href => "https://github.com/JuiceApp/Juice"}
+      %span Fork me on GitHub!

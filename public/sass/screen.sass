@@ -10,6 +10,9 @@
 $text-color: #FFFFFF
 $link-color: $text-color
 $background-color: #1d1d1d
+$black: #1B1B1B
+$white: #FFFFFF
+$yellow: #E5CD3C
 
 html
   background-color: $background-color
@@ -40,7 +43,7 @@ header
 
     h2
       position: absolute
-      top: 45px
+      top: 195px
       left: 440px
       width: 300px
       font-size: 2em
@@ -48,51 +51,22 @@ header
       font-weight: 300
       text-align: center
 
-  mark.lightning
-    position: relative
-    font-size: 0.5em
-    left: 360px
-    top: -2.65em
-
-
-  button#download
-    +punch
-    position: absolute
-    left: 440px
-    top: 127px
-    width: 300px
-    margin-top: 54px
-
-    font-size: 1.5em
-    font-family: Helvetica
-
-    mark, span, small
-      display: block
-
-    mark
-      float: left
-      font-size: 2em
-      padding: 0 0.67em
-
-    div
-      float: left
-
-    small
-      display: block
-      font-size: 0.5em
-      padding-top: 0.5em
-      +text-shadow(#E9EE8E, 0px, 1px, 0px)
-
-
 mark
   background: transparent
   color: inherit
 
+a
+  color: $link-color
+  +transition(background 1s, color 1s)
+  
+  &:hover
+    background: $yellow
+    color: $black
+    text-decoration: none
+    +text-shadow(none)
+
 article
   padding-top: 20em
-
-  a
-    color: $link-color
 
   p
     font-size: 1.25em
@@ -103,24 +77,41 @@ article
     margin-bottom: 50px
 
   pre
-    background: #E5CD3C
+    background: $yellow
     padding: 0.5em
     text-align: center
     +box-shadow(#222 1px 1px 1px)
-    margin: 30px 0
-    
+    margin: 30px 0 60px 0
+
     code
       +text-shadow(none)
       color: #222
       font-size: 1.5em
       font-weight: bold
+  
+  dl
+    font-size: 1.25em
+    margin: 20px auto 30px auto
+    width: 90%
+    
+    dt
+      font-weight: bold
+      margin-bottom: 0.5em
+      
+      .pronunciation
+        font-weight: normal
+    
+    dd
+      display: list-item
+      list-style: decimal
+      padding: 0.25em 0
 
 footer
   color: darken($text-color, 30%)
   margin-top: 100px
   padding: 1em 0
-  
+
   hr
     border: none
-    border-top: #ccc 1px solid
-    border-bottom: #333 1px solid
+    border-top: rgba(0.5, 0.5, 0.5, 0.35) 1px solid
+    border-bottom: rgba(0.4, 0.4, 0.4, 0.25) 1px solid

@@ -15,6 +15,13 @@
     %code
       git clone git://github.com/Induction/Induction.git
 
+  %ul.screenshots
+    - for image in [:explore, :query, :visualize]
+      %li
+        %a.fancybox{:href => "https://s3.amazonaws.com/induction/induction-#{image}.png", :alt => "Induction - #{image.to_s.capitalize}"}
+          %img{:src => "https://s3.amazonaws.com/induction/induction-#{image}-thumbnail.png"}
+    
+
   %section.functionality
     :markdown
       # Explore, Query, Visualize

@@ -3,9 +3,8 @@
 @import "bourbon/bourbon"
 
 @import "lib/functions"
-@import "lib/ribbon"
-
-// $text-color: #FFFED1
+// @import "lib/ribbon"
+@import "lib/fancybox"
 
 $text-color: #FFFFFF
 $link-color: $text-color
@@ -58,7 +57,7 @@ mark
 a
   color: $link-color
   +transition(background 1s, color 1s)
-  
+
   &:hover
     background: $yellow
     color: $black
@@ -88,23 +87,45 @@ article
       color: #222
       font-size: 1.5em
       font-weight: bold
-  
+
   dl
     font-size: 1.25em
     margin: 20px auto 30px auto
     width: 90%
-    
+
     dt
       font-weight: bold
       margin-bottom: 0.5em
-      
+
       .pronunciation
         font-weight: normal
-    
+
     dd
       display: list-item
       list-style: decimal
       padding: 0.25em 0
+
+  ul.screenshots
+    +clearfix
+    margin: 20px 0 50px 0
+    padding: 0
+    list-style: none
+
+    li
+      float: left
+      display: block
+      list-style: none
+      margin-right: 3px
+
+      &:last-child
+        margin-right: 0
+
+      a
+        padding: 2px
+
+      a, img
+        +border-radius(3px)
+        display: block
 
 footer
   color: darken($text-color, 30%)
